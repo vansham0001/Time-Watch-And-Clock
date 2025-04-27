@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Stopwatch & Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <audio id="tickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-clock-ticking-1005.mp3" preload="auto"></audio>
+        <audio id="lapSound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3" preload="auto"></audio>
+
+        <div class="clock-container">
+            <h1><i class="fas fa-clock"></i> Current Time</h1>
+            <div class="clock" id="clock">00:00:00</div>
+        </div>
+
+        <div class="stopwatch-container">
+            <h1><i class="fas fa-stopwatch"></i> Stopwatch</h1>
+            <div class="stopwatch" id="stopwatch">00:00:00</div>
+            
+            <div class="track-container">
+                <div class="track">
+                    <div class="runner" id="runner"></div>
+                    <div class="watch" id="watch">00:00:00</div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="startBtn"><i class="fas fa-play"></i> Start</button>
+                <button id="stopBtn"><i class="fas fa-pause"></i> Stop</button>
+                <button id="lapBtn"><i class="fas fa-flag"></i> Lap</button>
+                <button id="resetBtn"><i class="fas fa-redo"></i> Reset</button>
+            </div>
+            
+            <div class="laps-container">
+                <h3>Lap Times</h3>
+                <div class="laps" id="laps"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Designed For Micro IIT Internship 2025</p>
+        <p>Made By Vansham Dutta</p>
+        <p>Contact: <a href="mailto:vanshamdutta06@gmail.com">vanshamdutta06@gmail.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
